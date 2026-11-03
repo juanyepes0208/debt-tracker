@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Deudas</title>
+  <link rel="stylesheet" href="css/styles.css?v=2">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Control de Deudas</h1>
+      <p>Registra tus deudas y mantenlas bajo control.</p>
+    </header>
+
+    <!-- Formulario para agregar una nueva deuda -->
+    <form id="debt-form" class="debt-form" novalidate>
+      <div class="field">
+        <label for="debt-name">Nombre de la deuda</label>
+        <input
+          type="text"
+          id="debt-name"
+          placeholder="Ejemplo: Tarjeta de crédito"
+          autocomplete="off"
+        >
+        <p class="field-error" id="debt-name-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="debt-cost">Costo de la deuda</label>
+        <div class="cost-input">
+          <span>$</span>
+          <input
+            type="text"
+            id="debt-cost"
+            placeholder="1.000"
+            inputmode="numeric"
+            autocomplete="off"
+          >
+        </div>
+        <p class="field-error" id="debt-cost-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="debt-date">Fecha de vencimiento</label>
+        <input
+          type="date"
+          id="debt-date"
+        >
+        <p class="field-error" id="debt-date-error"></p>
+      </div>
+
+      <button type="submit" class="submit-button" id="submit-button">Agregar deuda</button>
+      <button type="button" class="cancel-button" id="cancel-edit-button" hidden>Cancelar edición</button>
+    </form>
+
+    <!-- Lista de deudas guardadas -->
+    <section class="debt-list-section">
+      <div class="list-header">
+        <h2>Mis deudas</h2>
+        <p class="total">Total: <strong id="total">$0</strong></p>
+      </div>
+
+      <ul id="debt-list" class="debt-list"></ul>
+      <p class="empty-message" id="empty-message">Todavía no tienes deudas.</p>
+    </section>
+  </main>
+
+  <script src="js/app.js?v=2"></script>
+</body>
+</html>
