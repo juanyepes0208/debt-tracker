@@ -7,6 +7,7 @@ Memoria breve del proyecto, organizada por secciones.
 - v1.0.0 funcionando: registrar deudas con nombre, costo y fecha de vencimiento; listado ordenado por cercanía, edición y eliminación.
 - Documentación lista: `README.md` en español, con captura en `docs/screenshot.png` (datos de ejemplo).
 - Plantillas de GitHub para reportar errores y enviar sugerencias en `.github/ISSUE_TEMPLATE/`.
+- Repositorio Git iniciado; `.gitignore` excluye archivos del sistema, editores, dependencias, builds, variables de entorno y logs.
 - Los datos se guardan en `localStorage` (clave `"debts"`) como `{ id, name, cost, dueDate }`.
 
 ## Decisiones (y por qué)
